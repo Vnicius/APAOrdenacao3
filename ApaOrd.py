@@ -1,4 +1,6 @@
-def counting_sort(vetor):
+##########Counting Sort##########
+
+def countingSort(vetor):
 
 	maior = vetor[0]
 
@@ -27,7 +29,7 @@ def counting_sort(vetor):
 	return saida
 
 
-#####################################
+##########Bucket Sort##########
 
 def bucketSort(vetor):
 	maior = vetor[0]
@@ -61,7 +63,7 @@ def bucketSort(vetor):
 	return ([b for bucket in buckets for b in bucket])
 	#return saida
 
-###################################################
+##########Radix Sort##########
 def radixSort(vetor):
 	maior = vetor[0]
 
@@ -74,8 +76,8 @@ def radixSort(vetor):
 	while maior/exp > 0:
 		vetor = countingSortRadix(vetor,exp)
 		exp *= 10
-		#print vetor
-	#print vetor
+
+	return vetor
 
 def countingSortRadix(vetor,exp):
 	maior = vetor[0]
@@ -107,7 +109,21 @@ def countingSortRadix(vetor,exp):
 
 ###################################################
 
+import sys
+
 if __name__ == '__main__':
-	vet = [1,2,5,12,9,4,6,100,102,99,39,13,12]
-	radixSort(vet)
-	print(bucketSort(vet))
+	op = sys.argv[1]
+	vetor = [0] * int(input())
+
+	for i in range(len(vetor)):
+		vetor[i] = int(input())
+	
+	if op == 1:
+		saida = countingSort(vetor)
+	elif op == 2:
+		saida = bucketSort(vetor)
+	else:
+		saida = radixSort(vetor)
+
+	for i in saida:
+		print i
