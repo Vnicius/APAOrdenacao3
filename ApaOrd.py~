@@ -112,7 +112,7 @@ def countingSortRadix(vetor,exp):
 import sys
 
 if __name__ == '__main__':
-	op = int(sys.argv[1])
+	op = sys.argv[1]
 	vetor = [0] * int(input())
 
 	for i in range(len(vetor)):
