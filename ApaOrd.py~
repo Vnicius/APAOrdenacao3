@@ -60,6 +60,7 @@ def bucketSort(vetor):
 					aux = y
 			buckets[int(num/10)].append(aux)
 
+	print (str(len(buckets))+ "numero de buckets")
 
 	return ([b for bucket in buckets for b in bucket])
 	#return saida
