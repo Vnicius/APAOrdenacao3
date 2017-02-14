@@ -60,6 +60,8 @@ def bucketSort(vetor):
 					aux = y
 			buckets[int(num/10)].append(aux)
 
+	print (str(len(buckets))+ "numero de buckets")
+
 	return ([b for bucket in buckets for b in bucket])
 	#return saida
 
@@ -112,7 +114,7 @@ def countingSortRadix(vetor,exp):
 import sys
 
 if __name__ == '__main__':
-	op = sys.argv[1]
+	op = int(sys.argv[1])
 	vetor = [0] * int(input())
 
 	for i in range(len(vetor)):
@@ -125,5 +127,5 @@ if __name__ == '__main__':
 	else:
 		saida = radixSort(vetor)
 
-	for i in saida:
-		print i
+	#for i in saida:
+		#print i
