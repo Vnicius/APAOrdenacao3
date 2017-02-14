@@ -126,5 +126,5 @@ if __name__ == '__main__':
 	else:
 		saida = radixSort(vetor)
 
-	#for i in saida:
-		#print i
+	for i in saida:
+		print i
